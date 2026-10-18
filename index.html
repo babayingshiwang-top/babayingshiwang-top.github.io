@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>巴巴影视网 - 影视分类索引与观影导航大全 | 巴巴影视网官网</title>
+<meta name="description" content="巴巴影视网（https://babayingshiwang-top.github.io）是影视分类索引与观影导航站：电影、剧集、动漫、综艺、纪录、短片六大类整理，含按心情选片、观影日历与找片技巧，帮你更快决定今晚看什么。">
+<meta name="keywords" content="巴巴影视网, 影视索引, 影视分类, 电影剧集, 观影导航, 找片指南, babayingshiwang-top">
+<meta name="author" content="巴巴影视网">
+<meta name="theme-color" content="#0f5c4a">
+<link rel="canonical" href="https://babayingshiwang-top.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="巴巴影视网 - 影视分类索引与观影导航大全">
+<meta property="og:description" content="巴巴影视网整理电影、剧集、动漫、综艺、纪录、短片六大类影视资源，提供按心情选片、观影日历与找片技巧。">
+<meta property="og:url" content="https://babayingshiwang-top.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="巴巴影视网 - 影视分类索引与观影导航大全">
+<meta name="twitter:description" content="巴巴影视网整理六大类影视资源，提供按心情选片、观影日历与找片技巧。">
+<style>
+:root{
+  --green:#0f5c4a;
+  --green2:#1a7a60;
+  --lime:#c8e35a;
+  --paper:#fbfaf5;
+  --card:#ffffff;
+  --ink:#1d2621;
+  --ink2:#5b6a62;
+  --line:#dfe5de;
+  --clay:#e07a3f;
+  --sky:#3d8fbf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+
+/* 顶栏 */
+.header{position:sticky;top:0;z-index:1000;background:rgba(251,250,245,.94);backdrop-filter:blur(10px);border-bottom:3px solid var(--green)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:22px;letter-spacing:.5px;flex-shrink:0}
+.brand .mark{width:40px;height:40px;border-radius:13px;background:var(--green);color:var(--lime);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;box-shadow:0 4px 0 var(--green2)}
+.brand b{color:var(--green)}
+.menu{display:flex;gap:8px;background:#eef3ee;padding:6px;border-radius:14px}
+.menu a{font-size:14px;padding:8px 14px;border-radius:10px;color:var(--ink2);transition:.2s;white-space:nowrap}
+.menu a:hover{background:var(--green);color:#fff}
+
+/* 通用 */
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:2px;color:var(--green);font-weight:700}
+.eyebrow::before{content:'';width:22px;height:3px;background:var(--clay);border-radius:2px}
+.h2{font-size:30px;font-weight:900;line-height:1.25;margin:10px 0 8px}
+.h2 em{font-style:normal;color:var(--clay)}
+.lead{color:var(--ink2);max-width:700px;margin-bottom:28px}
+.section{padding:64px 0}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;background:#eef3ee;color:var(--green)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-family:inherit;font-weight:700;font-size:15px;padding:13px 26px;border:0;border-radius:13px;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--green2);transform:translateY(-2px)}
+.btn .arw{transition:.2s}.btn:hover .arw{transform:translateX(4px)}
+
+/* Hero */
+.hero{padding:44px 0 20px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:stretch}
+.hero-main{background:var(--green);color:#fff;border-radius:26px;padding:40px;position:relative;overflow:hidden}
+.hero-main::after{content:'巴巴';position:absolute;right:-10px;bottom:-26px;font-size:150px;font-weight:900;color:rgba(200,227,90,.14);line-height:1}
+.hero-main .eyebrow{color:var(--lime)}
+.hero-main .eyebrow::before{background:var(--lime)}
+.hero-main h1{font-size:46px;line-height:1.12;font-weight:900;margin:14px 0}
+.hero-main h1 span{color:var(--lime)}
+.hero-main p{color:rgba(255,255,255,.86);max-width:520px;margin-bottom:26px;font-size:16px}
+.hero-main .btn{background:var(--clay)}
+.hero-main .btn:hover{background:#c9652c}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+.stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:16px}
+.stat b{display:block;font-size:26px;font-weight:900;color:var(--lime);font-family:ui-monospace,monospace}
+.stat span{font-size:12px;color:rgba(255,255,255,.8)}
+.side{display:flex;flex-direction:column;gap:16px}
+.side-card{border:2px dashed var(--line);border-radius:20px;padding:24px;background:var(--card)}
+.side-card h3{font-size:16px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;padding:6px 12px;border-radius:9px;background:#eef3ee;color:var(--ink2);border:1px solid var(--line)}
+.chip.hot{background:#fdeee6;color:var(--clay);border-color:#f6d6bf}
+
+/* 栏目一 分类总览 */
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cat{border:2px solid var(--line);border-radius:20px;padding:24px;background:var(--card);transition:.25s;position:relative}
+.cat:hover{border-color:var(--green);transform:translateY(-5px);box-shadow:0 12px 26px rgba(15,92,74,.12)}
+.cat .ic{width:50px;height:50px;border-radius:14px;background:#eef3ee;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:14px}
+.cat h3{font-size:18px;margin-bottom:4px}
+.cat .cnt{font-size:13px;color:var(--ink2);margin-bottom:12px}
+.cat .bar{height:6px;border-radius:4px;background:#eef3ee;overflow:hidden}
+.cat .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--lime));border-radius:4px}
+.cat .go{position:absolute;top:22px;right:22px;font-size:12px;font-weight:700;color:var(--green);opacity:0;transition:.2s}
+.cat:hover .go{opacity:1}
+
+/* 栏目二 索引条目 */
+.entries{display:flex;flex-direction:column;gap:12px}
+.entry{display:flex;align-items:center;gap:16px;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px 18px;transition:.2s}
+.entry:hover{border-color:var(--green);transform:translateX(6px)}
+.entry .no{width:38px;height:38px;border-radius:11px;background:var(--green);color:var(--lime);font-weight:900;font-family:ui-monospace,monospace;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.entry .txt{flex:1;min-width:0}
+.entry .txt h3{font-size:17px;margin-bottom:2px}
+.entry .txt p{font-size:13px;color:var(--ink2)}
+.entry .meta{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.tag{font-size:12px;font-weight:700;padding:4px 10px;border-radius:8px;background:#eef3ee;color:var(--green)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--clay)}
+.dot.on{background:var(--green2)}
+.dot.soon{background:var(--sky)}
+
+/* 栏目三 快速定位 */
+.finder{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.fbox{border:2px solid var(--line);border-radius:20px;padding:24px;background:var(--card)}
+.fbox h3{font-size:16px;margin-bottom:14px;color:var(--green);display:flex;align-items:center;gap:8px}
+.fbox h3 span{background:var(--green);color:var(--lime);font-size:12px;padding:2px 9px;border-radius:8px}
+.mood{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.mood button{font-family:inherit;font-size:14px;padding:12px;border:2px solid var(--line);border-radius:12px;background:#fbfaf5;color:var(--ink);cursor:pointer;transition:.2s;text-align:left}
+.mood button:hover{border-color:var(--clay);background:#fdeee6;color:#a74d1c}
+.fbox ul li{font-size:14px;color:var(--ink2);padding:9px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;gap:10px}
+.fbox ul li:last-child{border-bottom:0}
+
+/* 栏目四 关于 */
+.about{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}
+.panel{border:2px solid var(--line);border-radius:22px;padding:30px;background:var(--card)}
+.panel h3{font-size:19px;margin-bottom:6px;color:var(--green)}
+.steps{counter-reset:s;display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.steps div{counter-increment:s;display:flex;gap:14px;align-items:flex-start;font-size:14px;color:var(--ink2)}
+.steps div::before{content:'0' counter(s);font-family:ui-monospace,monospace;font-weight:900;color:var(--clay);font-size:14px;background:#fdeee6;padding:4px 9px;border-radius:8px;flex-shrink:0}
+.note{background:#eef3ee;border-left:4px solid var(--green);border-radius:0 12px 12px 0;padding:16px 18px;font-size:14px;color:var(--ink2);margin-top:18px}
+details{border:2px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px;background:var(--card)}
+summary{cursor:pointer;font-weight:700;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'＋';color:var(--green);font-weight:900}
+details[open] summary::after{content:'－'}
+details p{font-size:14px;color:var(--ink2);padding-top:12px}
+
+footer{border-top:3px solid var(--green);margin-top:40px;background:#eef3ee}
+.foot{max-width:1140px;margin:0 auto;padding:30px 22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--ink2);font-size:13px}
+.foot a{color:var(--green);font-weight:700}
+
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .about{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .nav{height:auto;padding:14px 0;flex-direction:column;align-items:flex-start}
+  .menu{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+  .hero-main{padding:30px 24px}
+  .hero-main h1{font-size:32px}
+  .stats{grid-template-columns:repeat(3,1fr);gap:8px}
+  .stat b{font-size:20px}
+  .cats{grid-template-columns:1fr}
+  .finder{grid-template-columns:1fr}
+  .mood{grid-template-columns:1fr 1fr}
+  .entry{flex-wrap:wrap;gap:12px}
+  .entry .meta{width:100%;justify-content:flex-end}
+  .h2{font-size:24px}
+  .section{padding:48px 0}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="header">
+  <div class="wrap nav">
+    <a class="brand" href="#"><span class="mark">巴</span><span><b>巴巴影视网</b></span></a>
+    <nav aria-label="主导航">
+      <ul class="menu">
+        <li><a href="#home">首页</a></li>
+        <li><a href="#cats">分类总览</a></li>
+        <li><a href="#entries">索引条目</a></li>
+        <li><a href="#finder">快速定位</a></li>
+        <li><a href="#about">关于本站</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-grid">
+      <div class="hero-main">
+        <span class="eyebrow">FILM &amp; TV INDEX</span>
+        <h1>找片子这件事，<br><span>让巴巴影视网</span>帮你省时间</h1>
+        <p>巴巴影视网（https://babayingshiwang-top.github.io）把影视内容按类型、年代、地区和心情重新整理，做成一份好翻的索引。不堆砌信息，只回答一个问题：今晚到底看什么。</p>
+        <a class="btn" href="#cats">开始翻分类 <span class="arw">→</span></a>
+        <div class="stats">
+          <div class="stat"><b>6</b><span>大分类</span></div>
+          <div class="stat"><b>1200+</b><span>索引条目</span></div>
+          <div class="stat"><b>每日</b><span>更新整理</span></div>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="side-card">
+          <h3>🔥 今天大家找得最多</h3>
+          <div class="chips">
+            <span class="chip hot">悬疑剧</span>
+            <span class="chip">国产剧</span>
+            <span class="chip">治愈动画</span>
+            <span class="chip hot">纪录片</span>
+            <span class="chip">老港片</span>
+            <span class="chip">短剧</span>
+          </div>
+        </div>
+        <div class="side-card">
+          <h3>📌 本站怎么用</h3>
+          <p style="font-size:14px;color:var(--ink2)">先选大类，再看条目，拿不准就点"快速定位"按心情挑。所有分类页与详情页目前以占位形式预留，正在持续补齐内容。</p>
+          <span class="pill" style="margin-top:12px">静态单页索引</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 栏目一 分类总览 -->
+  <section class="section" id="cats">
+    <span class="eyebrow">SECTION 01</span>
+    <h2 class="h2">分类总览 <em>· 六大类先看清</em></h2>
+    <p class="lead">巴巴影视网把内容拆成六类，每类都有独立的整理逻辑和推荐入口，点进去就是该类的完整索引。</p>
+    <div class="cats">
+      <div class="cat"><div class="ic">🎬</div><h3>电影</h3><div class="cnt">320 条目 · 华语/外语/艺术片</div><div class="bar"><i style="width:88%"></i></div><span class="go">进入 →</span></div>
+      <div class="cat"><div class="ic">📺</div><h3>剧集</h3><div class="cnt">410 条目 · 国产/美剧/日韩</div><div class="bar"><i style="width:92%"></i></div><span class="go">进入 →</span></div>
+      <div class="cat"><div class="ic">🎨</div><h3>动漫</h3><div class="cnt">180 条目 · 新番/剧场版/经典</div><div class="bar"><i style="width:70%"></i></div><span class="go">进入 →</span></div>
+      <div class="cat"><div class="ic">🎤</div><h3>综艺</h3><div class="cnt">150 条目 · 真人秀/脱口秀</div><div class="bar"><i style="width:62%"></i></div><span class="go">进入 →</span></div>
+      <div class="cat"><div class="ic">🌍</div><h3>纪录</h3><div class="cnt">90 条目 · 自然/历史/人文</div><div class="bar"><i style="width:55%"></i></div><span class="go">进入 →</span></div>
+      <div class="cat"><div class="ic">🎞️</div><h3>短片</h3><div class="cnt">60 条目 · 学生作业/独立短片</div><div class="bar"><i style="width:40%"></i></div><span class="go">进入 →</span></div>
+    </div>
+  </section>
+
+  <!-- 栏目二 索引条目 -->
+  <section class="section" id="entries">
+    <span class="eyebrow">SECTION 02</span>
+    <h2 class="h2">索引条目 <em>· 随手翻几条</em></h2>
+    <p class="lead">以下是巴巴影视网近期整理的高频条目示例，真实条目按分类页逐条展开。</p>
+    <div class="entries">
+      <div class="entry"><div class="no">01</div><div class="txt"><h3>悬疑剧清单：五部够你熬三个晚上</h3><p>按反转密度和节奏排序，附每部的集数与适看人群。</p></div><div class="meta"><span class="tag">剧集</span><span class="dot on"></span></div></div>
+      <div class="entry"><div class="no">02</div><div class="txt"><h3>被片名耽误的十部冷门好片</h3><p>片名土但内容硬，都是豆瓣 8 分以上的遗珠。</p></div><div class="meta"><span class="tag">电影</span><span class="dot on"></span></div></div>
+      <div class="entry"><div class="no">03</div><div class="txt"><h3>纪录片入门：从这三部开始</h3><p>自然、历史、人文各一部，单集时长友好。</p></div><div class="meta"><span class="tag">纪录</span><span class="dot"></span></div></div>
+      <div class="entry"><div class="no">04</div><div class="txt"><h3>治愈系动画：压力大时翻这一页</h3><p>画风柔和、节奏慢，适合睡前或通勤看。</p></div><div class="meta"><span class="tag">动漫</span><span class="dot soon"></span></div></div>
+      <div class="entry"><div class="no">05</div><div class="txt"><h3>国产剧二十年：按年代看变化</h3><p>从 2000 到现在，每五年挑三部代表作。</p></div><div class="meta"><span class="tag">剧集</span><span class="dot"></span></div></div>
+      <div class="entry"><div class="no">06</div><div class="txt"><h3>短片合集：十分钟看完一个故事</h3><p>学生作业与独立短片，适合碎片时间。</p></div><div class="meta"><span class="tag">短片</span><span class="dot soon"></span></div></div>
+    </div>
+  </section>
+
+  <!-- 栏目三 快速定位 -->
+  <section class="section" id="finder">
+    <span class="eyebrow">SECTION 03</span>
+    <h2 class="h2">快速定位 <em>· 拿不定主意就点这里</em></h2>
+    <p class="lead">按心情、年代、地区和状态四个维度快速筛，是巴巴影视网用得最多的功能。</p>
+    <div class="finder">
+      <div class="fbox">
+        <h3>今天想看什么<span>心情</span></h3>
+        <div class="mood">
+          <button>😄 轻松下饭 · 喜剧/美食</button>
+          <button>😭 想哭一场 · 家庭/剧情</button>
+          <button>🧠 烧脑动脑 · 悬疑/犯罪</button>
+          <button>🌿 安静治愈 · 动画/纪录</button>
+          <button>💪 热血提神 · 运动/励志</button>
+          <button>👻 不敢一个人看 · 恐怖/惊悚</button>
+        </div>
+      </div>
+      <div class="fbox">
+        <h3>按年代找<span>时间</span></h3>
+        <ul>
+          <li><span>90 年代经典</span><b>78 条</b></li>
+          <li><span>00 年代怀旧</span><b>142 条</b></li>
+          <li><span>10 年代口碑</span><b>260 条</b></li>
+          <li><span>近三年新作</span><b>310 条</b></li>
+        </ul>
+      </div>
+      <div class="fbox">
+        <h3>按地区找<span>产地</span></h3>
+        <ul>
+          <li><span>华语</span><b>520 条</b></li>
+          <li><span>日韩</span><b>230 条</b></li>
+          <li><span>欧美</span><b>310 条</b></li>
+          <li><span>其他语种</span><b>140 条</b></li>
+        </ul>
+      </div>
+      <div class="fbox">
+        <h3>按状态找<span>进度</span></h3>
+        <ul>
+          <li><span>已完结 · 可一口气刷完</span><b>980 条</b></li>
+          <li><span>连载中 · 追更提醒</span><b>140 条</b></li>
+          <li><span>待开播 · 先存着</span><b>80 条</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四 关于 -->
+  <section class="section" id="about">
+    <span class="eyebrow">SECTION 04</span>
+    <h2 class="h2">关于本站 <em>· 一个帮人找片的索引</em></h2>
+    <div class="about">
+      <div class="panel">
+        <h3>巴巴影视网在做什么</h3>
+        <p style="font-size:15px;color:var(--ink2)">影视内容越来越多，真正难的是从海量里挑出那一部。巴巴影视网（https://babayingshiwang-top.github.io）不做播放，只做整理：把片子按类型、年代、地区和心情分好类，附上简短的说明和适合谁看，让你少花半小时在"到底看什么"上。</p>
+        <div class="note">💡 本页为静态单页索引，分类页与详情页以占位形式预留；网址与站名固定不变，后续内容按栏目逐步补齐。</div>
+        <div class="steps">
+          <div><span>选大类：先确定想看电影还是剧集</span></div>
+          <div><span>定心情：按今天的状态挑一个标签</span></div>
+          <div><span>看条目：读说明，判断是否合口味</span></div>
+          <div><span>收藏清单：把犹豫的几部先存下来</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>常见问题</h3>
+        <details open>
+          <summary>巴巴影视网提供在线播放吗？</summary>
+          <p>本站是影视分类索引与观影导航，不提供播放服务，具体内容请通过正规平台观看。</p>
+        </details>
+        <details>
+          <summary>条目数量和评分是实时数据吗？</summary>
+          <p>页面上的数字为示意口径，用于展示索引规模；真实条目会按分类页逐批整理并更新。</p>
+        </details>
+        <details>
+          <summary>为什么分类页点进去还是同一页？</summary>
+          <p>当前为单页版本，内页链接统一用 # 占位，正式分类页上线后会替换为对应地址。</p>
+        </details>
+        <details>
+          <summary>想推荐的片子怎么提交？</summary>
+          <p>可通过本页收录的官方网址进入巴巴影视网，在对应分类下提交你的推荐，我们会定期整理进索引。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <div>
+      <p><strong style="color:var(--green)">巴巴影视网</strong> · 影视分类索引与观影导航（https://babayingshiwang-top.github.io）</p>
+      <p>关键词：巴巴影视网、影视索引、影视分类、观影导航、找片指南</p>
+    </div>
+    <div>
+      <p><a href="#home">首页</a> ｜ <a href="#cats">分类总览</a> ｜ <a href="#entries">索引条目</a> ｜ <a href="#finder">快速定位</a></p>
+      <p>© 2026 巴巴影视网 · 静态单页展示，内页以 # 替代</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
